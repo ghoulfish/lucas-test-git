@@ -1,0 +1,34 @@
+SVN initialize (can delete folder after initialization):
+svn co https://svn.riouxsvn.com/lucas-test-svn
+svn add trunk/new.txt 
+svn ci -m "add new.txt"
+
+
+git-svn initialize:
+git svn clone https://svn.riouxsvn.com/lucas-test-svn/trunk
+cd trunk
+*git branch (check if the branch is master)
+
+
+
+
+
+
+
+* = optional
+
+
+# Clone a repo (like git clone):
+        git svn clone https://svn.riouxsvn.com/lucas-test-svn/trunk
+# Enter the newly cloned directory:
+        cd trunk
+# You should be on master branch, double-check with 'git branch'
+        git branch
+# Do some work and commit locally to Git:
+        git commit ...
+# Something is committed to SVN, rebase your local changes against the
+# latest changes in SVN:
+        git svn rebase
+# Now commit your changes (that were committed previously using Git) to SVN,
+# as well as automatically updating your working HEAD:
+        git svn dcommit
