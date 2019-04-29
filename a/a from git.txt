@@ -7,28 +7,13 @@ svn ci -m "add new.txt"
 git-svn initialize:
 git svn clone https://svn.riouxsvn.com/lucas-test-svn/trunk
 cd trunk
-*git branch (check if the branch is master)
+git remote add origin https://github.com/ghoulfish/lucas-test-git.git
+git branch dev (create branch dev)
+* git branch -a (check branches)
+git checkout dev (switch to dev branch)
+git branch -u origin/dev
+git pull --allow-unrelated-histories
+* git push
 
-
-
-
-
-
-
-* = optional
-
-
-# Clone a repo (like git clone):
-        git svn clone https://svn.riouxsvn.com/lucas-test-svn/trunk
-# Enter the newly cloned directory:
-        cd trunk
-# You should be on master branch, double-check with 'git branch'
-        git branch
-# Do some work and commit locally to Git:
-        git commit ...
-# Something is committed to SVN, rebase your local changes against the
-# latest changes in SVN:
-        git svn rebase
-# Now commit your changes (that were committed previously using Git) to SVN,
-# as well as automatically updating your working HEAD:
-        git svn dcommit
+git svn rebase (pull from svn)
+git svn dcommit (push to svn)
