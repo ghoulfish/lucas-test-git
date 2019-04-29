@@ -1,12 +1,4 @@
-SVN initialize (can delete folder after initialization):
-svn co https://svn.riouxsvn.com/lucas-test-svn
-svn add trunk/new.txt 
-svn ci -m "add new.txt"
 
-
-git-svn initialize:
-git svn clone https://svn.riouxsvn.com/lucas-test-svn/trunk
-cd trunk
 git remote add origin https://github.com/ghoulfish/lucas-test-git.git
 git branch dev (create branch dev)
 * git branch -a (check branches)
